@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>New Star Public School Online Shop System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <script src="jquery/jquery-1.11.3.min.js"></script>
+  <script src="bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<script src="registration.js">
+</script>
+<body>
+<img src="logo.jpg" style="float:left;width:180px;height:100px;">
+<p align="right"><br>COMP344 Assignment 1 2015<br>
+Song Zhang<br>
+43121241<br><br>
+</p>
+<nav class="navbar navbar-default">
+    <div>
+      <ul class="nav navbar-nav">
+	  <li class="active"><a href="homepage.php">Home</a></li>
+      </ul>
+    </div>
+</nav>
+<div class="container">
+<form method="post" action="registerUser.php" onSubmit="return checkAll();">
+<h3>Registration:</h3>
+Username:<br>
+<input type="text" placeholder="Username" id="username" name="username" size=30 onblur="checkUsername()"/><br>
+<span id="usererror" style="color:red"></span>
+<br>
+
+Password:<br>
+<input type="password" placeholder="Password" id="password" name="password" size=30 onblur="checkPassword()"/><br>
+<span id="passworderror" style="color:red"></span>
+<br>
+
+Confirm Password:<br>
+<input type="password" placeholder="Confirm Password" id="repassword" size=30 onblur="checkRePassword()"/><br>
+<span id="repassworderror" style="color:red"></span>
+<br>
+
+Full name:<br>
+<input type="text" placeholder="Full name" id="fullname" name="fullname" size=30 onblur="checkFullname()"/><br>
+<span id="fullnameerror" style="color:red"></span>
+<br>
+
+Living address:<br>
+<input type="text" placeholder="StreetNo" id="streetno" name="streetno" size=7 onblur="checkStreet()"/>
+<input type="text" placeholder="Street name" id="streetname" name="streetname" size=45 onblur="checkStreet()"/><br>
+<span id="streeterror" style="color:red"></span>
+<br>
+<input type="text" placeholder="Suburb/City" id="suburbcity" name="suburbcity" size=30 onblur="checkStreet()"/>
+<select required id="state" name="state" style='width:70px'  >
+<option value=''>STATE</option>
+<option value='NSW'>NSW</option>
+<option value='QLD'>QLD</option>
+<option value='SA'>SA</option>
+<option value='TAS'>TAS</option>
+<option value='VIC'>VIC</option>
+<option value='WA'>WA</option>
+<option value='ACT'>ACT</option>
+</select>
+
+
+<input type="text" placeholder="Postcode" id="postcode" name="postcode" maxlength=4 size=10 onblur="checkStreet()"/><br>
+<span id="addresserror" style="color:red"></span>
+<br>
+
+Email address:<br>
+<input type="text" placeholder="Email address" id="email" name="email" size=30 onblur="checkEmail()"/><br>
+<span id="emailerror" style="color:red"></span><br>
+
+the Student's name:<br>
+<input type="text" placeholder="Student's name" id="studentname" name="studentname" size=30 onblur="checkStudentname()"/><br>
+<span id="nameerror" style="color:red"></span><br>
+
+Class:<br>
+<input type="text" placeholder="Class" id="classname" name="classname" size=30 onblur="checkClass()"/><br>
+<span id="classerror" style="color:red"></span><br>
+
+Credit Card Number:<br>
+<input type="text" placeholder="Credit Card Number" id="creditcardno" name="creditcardno" size=30 maxlength=10 onblur="checkCard()"/><br>
+<span id="CCNerror" style="color:red"></span><br>
+
+Expiry Date:<br>
+
+
+ <select required id="purchase_creditCardExpirationMonth" name="purchase_creditCardExpirationMonth">
+	<option value="">--</option>
+    <option value="01">01</option>
+    <option value="02">02</option>
+    <option value="03">03</option>
+    <option value="04">04</option>
+    <option value="05">05</option>
+    <option value="06">06</option>
+    <option value="07">07</option>
+    <option value="08">08</option>
+    <option value="09">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+</select>
+<select required id="purchase_creditCardExpirationYear" name="purchase_creditCardExpirationYear" onblur='checkDate()'>
+	<option value="">----</option>
+    <option value="2015">2015</option>
+    <option value="2016">2016</option>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+	<option value="2019">2019</option>
+    <option value="2020">2020</option>
+    <option value="2021">2021</option>
+    <option value="2022">2022</option>
+    <option value="2023">2023</option>
+    <option value="2024">2024</option>
+	<option value="2025">2025</option>
+</select>
+<br>
+<span id="dateerror" style="color:red"></span>
+<br><br>
+
+
+<input type="submit" value="Submit"/>
+</form>
+</div>
+
+</body>
+</html>
+
